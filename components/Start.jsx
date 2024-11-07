@@ -1,8 +1,10 @@
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import { Colors } from "@/constants/Colors";
+import { useRouter } from "expo-router";
 
 export default function Start() {
+  const router = useRouter();
   return (
     <View style={{ flex: 1, backgroundColor: Colors.FULLBLACK }}>
       <Image
@@ -15,7 +17,12 @@ export default function Start() {
       <Text style={styles.subDescription}>
         Welcome to our cozy coffee corner, where every cup is a delight for you.
       </Text>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity
+        onPress={() => {
+          router.replace("/home");
+        }}
+        style={styles.button}
+      >
         <Text
           style={{ fontFamily: "sora-bold", color: Colors.WHITE, fontSize: 18 }}
         >
