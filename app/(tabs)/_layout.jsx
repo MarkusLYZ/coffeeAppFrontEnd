@@ -23,7 +23,7 @@ export default function TabLayout() {
         <Tabs.Screen
           name="home"
           options={{
-            tabBarIcon: ({ color, focused }) => <HomeIcon fill={color} />,
+            tabBarIcon: ({ color }) => <HomeIcon fill={color} />,
           }}
         />
         <Tabs.Screen
